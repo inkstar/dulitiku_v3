@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+
+# Node
+node_modules/
+**/node_modules/**
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+client/build/
+dist/
+
+# Env & local configs
+.env
+.env.*
+client/.env*
+server/.env*
+
+# Database (avoid pushing personal data)
+server/database.sqlite
+
+# Editor
+.idea/
+.vscode/
+*.swp
+node_modules
