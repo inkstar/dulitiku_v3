@@ -1,0 +1,21 @@
+{
+  "name": "dulitiku-v3",
+  "version": "1.0.0",
+  "description": "数学题库管理系统",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "node server/index.js",
+    "build:prod": "npm run install-all && npm run build"
+  },
+  "keywords": ["题库", "数学", "组卷"],
+  "author": "独立老师",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
