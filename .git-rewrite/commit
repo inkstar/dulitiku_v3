@@ -1,0 +1,6 @@
+tree 7c451a012cada62c2762c5292c381c14ba07681f
+parent 2304289d90f7a07bb5fc429eff5112c03dc0efcb
+author 沈超楠 <shenchaonan@shenchaonandeMac-mini.local> 1755357595 +0800
+committer 沈超楠 <shenchaonan@shenchaonandeMac-mini.local> 1755357595 +0800
+
+chore: add .gitignore and prepare for GitHub remote

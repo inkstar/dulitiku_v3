@@ -124,6 +124,8 @@ db.serialize(() => {
     title TEXT NOT NULL,
     description TEXT,
     type TEXT DEFAULT 'manual',
+    teacher TEXT,
+    serial_no INTEGER,
     created_at DATETIME DEFAULT (datetime('now', 'localtime'))
   )`);
 
@@ -135,6 +137,24 @@ db.serialize(() => {
     FOREIGN KEY (paper_id) REFERENCES papers (id),
     FOREIGN KEY (question_id) REFERENCES questions (id)
   )`);
+
+  // 为papers表新增teacher字段（如果不存在）
+  db.run("ALTER TABLE papers ADD COLUMN teacher TEXT", (err) => {
+    if (err && err.message.includes('duplicate column name')) {
+      // 已存在，忽略
+    } else if (err) {
+      console.error('添加papers.teacher列失败:', err);
+    }
+  });
+
+  // 为papers表新增serial_no字段（如果不存在）
+  db.run("ALTER TABLE papers ADD COLUMN serial_no INTEGER", (err) => {
+    if (err && err.message.includes('duplicate column name')) {
+      // 已存在，忽略
+    } else if (err) {
+      console.error('添加papers.serial_no列失败:', err);
+    }
+  });
 });
 
 // API路由
@@ -253,65 +273,86 @@ app.delete('/api/questions/:id', (req, res) => {
 });
 
 app.post('/api/papers', (req, res) => {
-  const { title, description, questionIds } = req.body;
+  const { title, description, questionIds, teacher } = req.body;
   const id = uuidv4();
 
-  db.run(
-    'INSERT INTO papers (id, title, description) VALUES (?, ?, ?)',
-    [id, title, description],
-    function (err) {
+  // 计算当天此教师的序号（serial_no），以东八区日期为准
+  const now = new Date();
+  const beijing = new Date(now.getTime() + (8 * 3600000));
+  const dayStr = `${beijing.getFullYear()}-${String(beijing.getMonth() + 1).padStart(2, '0')}-${String(beijing.getDate()).padStart(2, '0')}`;
+
+  db.get(
+    "SELECT COALESCE(MAX(serial_no), 0) AS max_no FROM papers WHERE DATE(created_at) = DATE(?) AND (teacher = ? OR (teacher IS NULL AND ? IS NULL))",
+    [dayStr, teacher || null, teacher || null],
+    (err, row) => {
       if (err) {
         res.status(500).json({ error: err.message });
         return;
       }
+      const serialNo = (row?.max_no || 0) + 1;
+      const dateTitle = `${beijing.getFullYear()}${String(beijing.getMonth() + 1).padStart(2, '0')}${String(beijing.getDate()).padStart(2, '0')}`;
+      const teacherName = teacher || '独立老师';
+      const shouldAuto = !title || !String(title).trim();
+      const finalTitle = shouldAuto ? `${teacherName}${dateTitle}数学试卷 #${serialNo}` : title;
 
-      const insertAssociations = () =>
-        new Promise((resolve, reject) => {
-          if (questionIds && questionIds.length > 0) {
-            let remaining = questionIds.length;
-            questionIds.forEach((questionId, index) => {
-              db.run(
-                'INSERT INTO paper_questions (id, paper_id, question_id, order_num) VALUES (?, ?, ?, ?)',
-                [uuidv4(), id, questionId, index + 1],
-                (err2) => {
-                  if (err2) {
-                    reject(err2);
-                    return;
-                  }
-                  remaining -= 1;
-                  if (remaining === 0) resolve(null);
-                }
-              );
-            });
-          } else {
-            resolve(null);
+      db.run(
+        'INSERT INTO papers (id, title, description, teacher, serial_no) VALUES (?, ?, ?, ?, ?)',
+        [id, finalTitle, description, teacher || null, serialNo],
+        function (err1) {
+          if (err1) {
+            res.status(500).json({ error: err1.message });
+            return;
           }
-        });
 
-      insertAssociations()
-        .then(() => {
-          db.get('SELECT * FROM papers WHERE id = ?', [id], (err3, paperRow) => {
-            if (err3) {
-              res.status(500).json({ error: err3.message });
-              return;
-            }
-            // 计算题目数量
-            db.get(
-              'SELECT COUNT(*) as question_count FROM paper_questions WHERE paper_id = ?',
-              [id],
-              (err4, countRow) => {
-                if (err4) {
-                  res.status(500).json({ error: err4.message });
+          const insertAssociations = () =>
+            new Promise((resolve, reject) => {
+              if (questionIds && questionIds.length > 0) {
+                let remaining = questionIds.length;
+                questionIds.forEach((questionId, index) => {
+                  db.run(
+                    'INSERT INTO paper_questions (id, paper_id, question_id, order_num) VALUES (?, ?, ?, ?)',
+                    [uuidv4(), id, questionId, index + 1],
+                    (err2) => {
+                      if (err2) {
+                        reject(err2);
+                        return;
+                      }
+                      remaining -= 1;
+                      if (remaining === 0) resolve(null);
+                    }
+                  );
+                });
+              } else {
+                resolve(null);
+              }
+            });
+
+          insertAssociations()
+            .then(() => {
+              db.get('SELECT * FROM papers WHERE id = ?', [id], (err3, paperRow) => {
+                if (err3) {
+                  res.status(500).json({ error: err3.message });
                   return;
                 }
-                res.json({ ...paperRow, question_count: countRow.question_count });
-              }
-            );
-          });
-        })
-        .catch((err2) => {
-          res.status(500).json({ error: err2.message });
-        });
+                // 计算题目数量
+                db.get(
+                  'SELECT COUNT(*) as question_count FROM paper_questions WHERE paper_id = ?',
+                  [id],
+                  (err4, countRow) => {
+                    if (err4) {
+                      res.status(500).json({ error: err4.message });
+                      return;
+                    }
+                    res.json({ ...paperRow, question_count: countRow.question_count });
+                  }
+                );
+              });
+            })
+            .catch((err2) => {
+              res.status(500).json({ error: err2.message });
+            });
+        }
+      );
     }
   );
 });

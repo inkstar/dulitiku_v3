@@ -120,7 +120,8 @@ const ManualPaper: React.FC = () => {
       const paperData = {
         title: formData.title,
         description: formData.description,
-        questionIds: selectedQuestions
+        questionIds: selectedQuestions,
+        teacher: '独立老师'
       };
       
       const response = await paperApi.create(paperData);
