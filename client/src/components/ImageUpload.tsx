@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Upload, FileText, Eye, X, Loader } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Upload, FileText, X, Loader } from 'lucide-react';
 import Tesseract from 'tesseract.js';
 
 interface ImageUploadProps {
@@ -17,6 +17,15 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
   const [recognizedText, setRecognizedText] = useState<string>('');
   const [error, setError] = useState<string>('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // 预览URL释放，避免内存泄漏；但不在识别完成后自动清除，直到用户手动清空
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+    };
+  }, [previewUrl]);
 
   // 图片预处理函数
   const preprocessImage = (file: File): Promise<File> => {
@@ -197,13 +206,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
         answer: answer.trim(),
         analysis: analysis.trim()
       });
-
-      // 清理状态
-      setPreviewUrl(null);
-      setRecognizedText('');
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
-      }
+      // 保留图片与识别文本，直到用户手动点击“重新上传/清除”
     } catch (error) {
       setError('识别失败，请重试');
     }

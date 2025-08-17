@@ -83,7 +83,7 @@ const QuestionForm: React.FC = () => {
       answer: result.answer,
       analysis: result.analysis
     }));
-    setInputMode('manual'); // 切换到手动模式进行编辑
+    // 识别后不再自动切换到手动模式，保留在图片识别界面，便于对照与二次编辑
   };
 
   // LaTeX智能识别功能

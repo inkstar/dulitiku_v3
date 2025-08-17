@@ -147,6 +147,13 @@ npm start
   - 仅成功创建计入当日序号；失败不占用编号
   - 前端人工/智能组卷创建时传入 `teacher`（当前默认“独立老师”）
 
+### v1.1.1 (2025-08-17 10:25:00)
+- 图片识别体验改进：
+  - OCR 识别完成后不再自动切换到“手动输入”，仍停留在“图片识别”界面
+  - 保留图片预览与识别文本，直到用户手动点击“重新上传/清除”为止
+  - 释放对象URL以避免内存泄漏；清理未使用的图标导入
+  - 涉及文件：`client/src/components/ImageUpload.tsx`、`client/src/components/QuestionForm.tsx`
+
 ## 许可证
 
 MIT License
