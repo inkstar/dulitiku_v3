@@ -39,21 +39,27 @@ export const preprocessLatex = (content: string): string => {
   // 处理 \begin{align} ... \end{align} 格式
   processed = processed.replace(/\\begin\{align\}([\s\S]*?)\\end\{align\}/g, '$$$$1$$');
   
-  // 处理 \begin{cases} ... \end{cases}（未包裹 $$ 也能渲染）
+  // 处理 \begin{cases} ... \end{cases}
+  // 场景：有些题型其实是集合的“竖线”表示法，被识别成了两列表达式（cases）。
+  // 这里将其转换为集合的构造表示：{ expr \mid condition }
   processed = processed.replace(/\\begin\{cases\}([\s\S]*?)\\end\{cases\}/g, (_m, content) => {
-    let normalized = String(content)
-      // 把竖线 | 当作分列符转换为 &（如果真的需要竖线，识别端应输出 \\mid）
-      .replace(/\|/g, ' & ')
-      // 连续多个反斜杠规整为换行 \\
-      .replace(/\\{3,}/g, '\\\\')
-      // 移除可能出现在行首的无效下划线占位
-      .replace(/^\s*\\_\s*$/gm, '')
+    let inner = String(content)
+      .replace(/^\s*\\_\s*$/gm, '') // 去除无效占位
+      .replace(/\\{3,}/g, '\\')     // 归一化换行标记 \\
       .trim();
-    // 若末尾没有换行，补一个换行，避免 KaTeX 对 cases 行尾的要求
-    if (!/\\\\\s*$/.test(normalized)) {
-      normalized += ' \\\\';
+    // 支持“|”或“&”作为两列分隔
+    inner = inner.replace(/\|/g, ' & ');
+    // 去掉末尾多余的换行
+    inner = inner.replace(/\\\s*$/g, '').trim();
+    const parts = inner.split(/\s*&\s*/);
+    if (parts.length >= 2) {
+      const left = parts[0].trim();
+      const right = parts.slice(1).join(' & ').trim();
+      // 返回为行内数学，便于在句中显示
+      return `$\\{ ${left} \\mid ${right} \\}$`;
     }
-    return `$$\\begin{cases}${normalized}\\end{cases}$$`;
+    // 若无法解析为两列，兜底包裹为块级显示，避免报错
+    return `$$${inner}$$`;
   });
 
   return processed;
