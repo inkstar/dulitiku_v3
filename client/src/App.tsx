@@ -10,6 +10,7 @@ import AdminPanel from './components/AdminPanel';
 import AutoPaper from './components/AutoPaper';
 import ManualPaper from './components/ManualPaper';
 import PaperDetail from './components/PaperDetail';
+import ApiManagement from './components/ApiManagement';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/papers/:id" element={<PaperDetail />} />
           <Route path="/papers/auto" element={<AutoPaper />} />
           <Route path="/papers/manual" element={<ManualPaper />} />
+          <Route path="/api-management" element={<ApiManagement />} />
           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </Layout>

@@ -71,6 +71,11 @@ const ManualPaper: React.FC = () => {
           customTagCount[tag] = (customTagCount[tag] || 0) + 1;
         });
       }
+      // 兼容历史数据：将 knowledge_point 也并入标签统计
+      if ((q as any).knowledge_point && String((q as any).knowledge_point).trim()) {
+        const kp = String((q as any).knowledge_point).trim();
+        customTagCount[kp] = (customTagCount[kp] || 0) + 1;
+      }
       if (q.grade) {
         gradeCount[q.grade] = (gradeCount[q.grade] || 0) + 1;
       }

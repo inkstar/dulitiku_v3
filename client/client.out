@@ -1,0 +1,1669 @@
+
+> dulitiku-client@0.1.0 start
+> react-scripts start
+
+(node:4393) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:4393) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 2:28:    'Eye' is defined but never used   @typescript-eslint/no-unused-vars
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:28:    'Eye' is defined but never used   @typescript-eslint/no-unused-vars
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 2:28:    'Eye' is defined but never used   @typescript-eslint/no-unused-vars
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:28:    'Eye' is defined but never used   @typescript-eslint/no-unused-vars
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+Compiling...
+No issues found.
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/App.tsx
+  Line 13:8:  'ApiManagement' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/App.tsx
+  Line 13:8:  'ApiManagement' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/App.tsx
+  Line 13:8:  'ApiManagement' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/App.tsx
+  Line 13:8:  'ApiManagement' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 160:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used             @typescript-eslint/no-unused-vars
+  Line 4:10:    'mathOcrService' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 4:31:    'OcrResult' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 161:41:  Unnecessary escape character: \.            no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used        @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used             @typescript-eslint/no-unused-vars
+  Line 4:10:    'mathOcrService' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 4:31:    'OcrResult' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 161:41:  Unnecessary escape character: \.            no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 4:10:    'mathOcrService' is defined but never used              @typescript-eslint/no-unused-vars
+  Line 20:10:   'ocrResult' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 20:21:   'setOcrResult' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  Line 21:10:   'useAdvancedOcr' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 21:26:   'setUseAdvancedOcr' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 163:41:  Unnecessary escape character: \.                        no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 20:10:   'ocrResult' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 21:26:   'setUseAdvancedOcr' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                        no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 20:10:   'ocrResult' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 21:26:   'setUseAdvancedOcr' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                        no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 20:10:   'ocrResult' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 21:26:   'setUseAdvancedOcr' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                        no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 2:39:    'Settings' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 2:49:    'Zap' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 20:10:   'ocrResult' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 21:26:   'setUseAdvancedOcr' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                        no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 20:10:   'ocrResult' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 20:10:   'ocrResult' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 20:10:   'ocrResult' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 184:41:  Unnecessary escape character: \.                no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:277:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    275 |         <ApiConfigModal
+    276 |           api={editingApi}
+  > 277 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    278 |           onCancel={() => {
+    279 |             setIsAddModalOpen(false);
+    280 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:279:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    277 |         <ApiConfigModal
+    278 |           api={editingApi}
+  > 279 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    280 |           onCancel={() => {
+    281 |             setIsAddModalOpen(false);
+    282 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:279:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    277 |         <ApiConfigModal
+    278 |           api={editingApi}
+  > 279 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    280 |           onCancel={() => {
+    281 |             setIsAddModalOpen(false);
+    282 |             setEditingApi(null);
+
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+Compiling...
+ERROR in src/components/ApiManagement.tsx:279:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    277 |         <ApiConfigModal
+    278 |           api={editingApi}
+  > 279 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    280 |           onCancel={() => {
+    281 |             setIsAddModalOpen(false);
+    282 |             setEditingApi(null);
+
+Failed to compile.
+
+[eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+ERROR in [eslint] 
+src/components/ApiManagement.tsx
+  Line 66:9:  Unexpected use of 'confirm'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 2 warnings
+ERROR in src/components/ApiManagement.tsx:279:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    277 |         <ApiConfigModal
+    278 |           api={editingApi}
+  > 279 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    280 |           onCancel={() => {
+    281 |             setIsAddModalOpen(false);
+    282 |             setEditingApi(null);
+

@@ -16,6 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { path: '/papers/auto', label: '智能组卷', icon: Eye },
     { path: '/papers/manual', label: '人工组卷', icon: FileText },
     { path: '/papers', label: '试卷管理', icon: List },
+    { path: '/api-management', label: 'API管理', icon: Settings },
     { path: '/admin', label: '服务器管理', icon: Server },
   ];
 

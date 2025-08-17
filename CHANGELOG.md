@@ -550,10 +550,28 @@
 
 ## 2025-08-17 10:25:00 (v1.1.1)
 - 新增题目：图片识别体验改进
-  - OCR 识别完成后不再自动切换到“手动输入”，仍停留在“图片识别”界面
-  - 保留图片预览与识别文本，直到用户手动点击“重新上传/清除”为止
+  - OCR 识别完成后不再自动切换到"手动输入"，仍停留在"图片识别"界面
+  - 保留图片预览与识别文本，直到用户手动点击"重新上传/清除"为止
   - 释放对象URL（Object URL）以避免内存泄漏
   - 清理未使用的图标导入
   - 受影响文件：
     - `client/src/components/ImageUpload.tsx`
     - `client/src/components/QuestionForm.tsx`
+
+## 2025-08-17 18:30:00 (v1.2.0)
+- 数学公式OCR功能重大升级
+  - **新增API管理模块**：左侧导航新增"API管理"页面，支持用户自定义配置OCR API
+  - **多API支持**：集成Mathpix、腾讯云、百度、阿里云、讯飞等专业数学公式识别API
+  - **智能回退策略**：按优先级调用API，失败时自动尝试下一个，最终回退到本地Tesseract
+  - **LaTeX输出**：专业API支持直接输出LaTeX格式，提升数学公式处理能力
+  - **使用量监控**：显示每个API的月使用量和限额，避免超量调用
+  - **API测试功能**：支持测试API配置的连通性和有效性
+  - **双模式切换**：图片识别界面支持"数学公式OCR"和"基础OCR"模式切换
+  - **详细识别信息**：显示使用的API、置信度、LaTeX结果等详细信息
+  - 新增文件：
+    - `client/src/components/ApiManagement.tsx` - API管理界面
+    - `client/src/services/mathOcrApi.ts` - 数学OCR服务核心
+  - 更新文件：
+    - `client/src/components/ImageUpload.tsx` - 集成新OCR服务
+    - `client/src/components/Layout.tsx` - 添加API管理导航
+    - `client/src/App.tsx` - 添加API管理路由

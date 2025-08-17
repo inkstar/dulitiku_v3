@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Upload, FileText, X, Loader } from 'lucide-react';
+import { Upload, FileText, X, Loader, Settings, Zap } from 'lucide-react';
 import Tesseract from 'tesseract.js';
+import { mathOcrService, type OcrResult } from '../services/mathOcrApi';
 
 interface ImageUploadProps {
   onRecognized: (result: {
@@ -16,6 +17,8 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [recognizedText, setRecognizedText] = useState<string>('');
   const [error, setError] = useState<string>('');
+  const [ocrResult, setOcrResult] = useState<OcrResult | null>(null);
+  const [useAdvancedOcr, setUseAdvancedOcr] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // 预览URL释放，避免内存泄漏；但不在识别完成后自动清除，直到用户手动清空
@@ -108,26 +111,47 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
     try {
       setIsUploading(false);
       setIsRecognizing(true);
+      setError('');
 
-      // 预处理图片
-      const processedFile = await preprocessImage(file);
+      let result: OcrResult;
 
-      // 使用Tesseract.js进行OCR识别
-      const result = await Tesseract.recognize(
-        processedFile,
-        'chi_sim+eng', // 中文简体 + 英文
-        {
-          logger: (m) => {
-            if (m.status === 'recognizing text') {
-              // 可以在这里显示识别进度
-              console.log(`识别进度: ${Math.round(m.progress * 100)}%`);
+      if (useAdvancedOcr) {
+        // 使用配置的数学OCR API
+        result = await mathOcrService.recognizeImage(file);
+      } else {
+        // 使用本地Tesseract.js
+        const processedFile = await preprocessImage(file);
+        const tesseractResult = await Tesseract.recognize(
+          processedFile,
+          'chi_sim+eng',
+          {
+            logger: (m) => {
+              if (m.status === 'recognizing text') {
+                console.log(`识别进度: ${Math.round(m.progress * 100)}%`);
+              }
             }
           }
-        }
-      );
+        );
+        
+        result = {
+          success: true,
+          text: tesseractResult.data.text,
+          confidence: tesseractResult.data.confidence,
+          apiUsed: 'Tesseract.js (本地)'
+        };
+      }
 
-      const recognizedText = result.data.text;
-      setRecognizedText(recognizedText);
+      setOcrResult(result);
+      
+      if (result.success) {
+        setRecognizedText(result.text);
+        if (!result.text.trim()) {
+          setError('未识别到文字内容，请检查图片质量');
+        }
+      } else {
+        setError(result.error || '识别失败');
+      }
+      
       setIsRecognizing(false);
     } catch (error) {
       console.error('OCR识别失败:', error);
@@ -216,6 +240,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
     setPreviewUrl(null);
     setRecognizedText('');
     setError('');
+    setOcrResult(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -223,9 +248,42 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
 
   return (
     <div className="bg-white shadow rounded-lg p-6">
-      <div className="flex items-center mb-4">
-        <Upload className="h-6 w-6 text-blue-600 mr-2" />
-        <h3 className="text-lg font-medium text-gray-900">图片识别</h3>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center">
+          <Upload className="h-6 w-6 text-blue-600 mr-2" />
+          <h3 className="text-lg font-medium text-gray-900">图片识别</h3>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setUseAdvancedOcr(!useAdvancedOcr)}
+              className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                useAdvancedOcr
+                  ? 'bg-blue-100 text-blue-800'
+                  : 'bg-gray-100 text-gray-600'
+              }`}
+            >
+              {useAdvancedOcr ? (
+                <>
+                  <Zap className="h-4 w-4 inline mr-1" />
+                  数学公式OCR
+                </>
+              ) : (
+                <>
+                  基础OCR
+                </>
+              )}
+            </button>
+          </div>
+          <a
+            href="/api-management"
+            target="_blank"
+            className="text-sm text-blue-600 hover:text-blue-800 flex items-center"
+          >
+            <Settings className="h-4 w-4 mr-1" />
+            API设置
+          </a>
+        </div>
       </div>
 
       {/* 文件上传区域 */}
@@ -296,18 +354,44 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
         <div className="mb-4">
           <div className="flex items-center justify-between mb-2">
             <h4 className="text-sm font-medium text-gray-700">识别结果</h4>
-            {isRecognizing && (
-              <div className="flex items-center text-sm text-gray-500">
-                <Loader className="h-4 w-4 animate-spin mr-1" />
-                正在识别...
-              </div>
-            )}
+            <div className="flex items-center space-x-2">
+              {isRecognizing && (
+                <div className="flex items-center text-sm text-gray-500">
+                  <Loader className="h-4 w-4 animate-spin mr-1" />
+                  正在识别...
+                </div>
+              )}
+              {ocrResult?.apiUsed && (
+                <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                  {ocrResult.apiUsed}
+                </span>
+              )}
+              {ocrResult?.confidence !== undefined && (
+                <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                  置信度: {Math.round(ocrResult.confidence)}%
+                </span>
+              )}
+            </div>
           </div>
+          
           <div className="bg-gray-50 p-4 rounded-md">
             <pre className="text-sm text-gray-800 whitespace-pre-wrap font-mono">
               {recognizedText}
             </pre>
           </div>
+          
+          {/* LaTeX结果（如果有） */}
+          {ocrResult?.latex && ocrResult.latex !== recognizedText && (
+            <div className="mt-3">
+              <h5 className="text-sm font-medium text-gray-700 mb-2">LaTeX格式：</h5>
+              <div className="bg-green-50 p-3 rounded-md">
+                <pre className="text-sm text-green-800 whitespace-pre-wrap font-mono">
+                  {ocrResult.latex}
+                </pre>
+              </div>
+            </div>
+          )}
+          
           <div className="mt-4 flex space-x-2">
             <button
               onClick={handleRecognize}
@@ -331,12 +415,14 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
       <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
         <h4 className="text-sm font-medium text-blue-800 mb-2">使用说明</h4>
         <ul className="text-sm text-blue-700 space-y-1">
-          <li>• 上传清晰的题目图片，确保文字清晰可读</li>
-          <li>• 支持手写和打印体文字识别（中文+英文）</li>
-          <li>• 系统会自动增强图片对比度，提高识别准确率</li>
+          <li>• <strong>数学公式OCR</strong>：使用专业API识别数学公式，支持LaTeX输出</li>
+          <li>• <strong>基础OCR</strong>：使用本地Tesseract.js识别普通文字</li>
+          <li>• 上传清晰的题目图片，确保文字和公式清晰可读</li>
+          <li>• 系统会自动选择合适的API进行识别（按优先级）</li>
           <li>• 识别结果会智能分段为题目、答案、解析</li>
           <li>• 识别结果需要人工校对后使用</li>
           <li>• 建议使用高分辨率、对比度强的图片</li>
+          <li>• 如需配置API，请点击右上角"API设置"</li>
         </ul>
       </div>
     </div>
