@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Upload, FileText, X, Loader, Settings, Zap } from 'lucide-react';
 import Tesseract from 'tesseract.js';
 import { mathOcrService, type OcrResult } from '../services/mathOcrApi';
+import { renderMarkdownWithLatex } from '../utils/latexRenderer';
 
 interface ImageUploadProps {
   onRecognized: (result: {
@@ -142,9 +143,20 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
       }
 
       setOcrResult(result);
-      
+
+      const normalizeIflyLatex = (text: string): string => {
+        if (!text) return '';
+        // 将 ifly-latex 标记转换为 KaTeX 可识别的 $$ 块级公式
+        let t = text.replace(/ifly-latex-begin/gi, '$$').replace(/ifly-latex-end/gi, '$$');
+        // 去除可能多余的空格
+        t = t.replace(/\$\$\s+/g, '$$').replace(/\s+\$\$/g, '$$');
+        return t;
+      };
+
       if (result.success) {
-        setRecognizedText(result.text);
+        // 优先使用API直接给出的latex，否则使用文本，并规范化 ifly-latex 标记
+        const normalized = normalizeIflyLatex(result.latex || result.text);
+        setRecognizedText(normalized);
         if (!result.text.trim()) {
           setError('未识别到文字内容，请检查图片质量');
         }
@@ -374,11 +386,22 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
             </div>
           </div>
           
-          <div className="bg-gray-50 p-4 rounded-md">
-            <pre className="text-sm text-gray-800 whitespace-pre-wrap font-mono">
-              {recognizedText}
-            </pre>
+          {/* 渲染视图 */}
+          <div className="bg-white p-4 rounded-md border">
+            <div
+              className="prose max-w-none"
+              dangerouslySetInnerHTML={{ __html: renderMarkdownWithLatex(recognizedText) }}
+            />
           </div>
+          {/* 原始文本 */}
+          <details className="mt-2">
+            <summary className="text-sm text-gray-600 cursor-pointer">查看原始识别文本</summary>
+            <div className="bg-gray-50 p-3 rounded-md mt-2">
+              <pre className="text-xs text-gray-800 whitespace-pre-wrap font-mono">
+                {recognizedText}
+              </pre>
+            </div>
+          </details>
           
           {/* LaTeX结果（如果有） */}
           {ocrResult?.latex && ocrResult.latex !== recognizedText && (

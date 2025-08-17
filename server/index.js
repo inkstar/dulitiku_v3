@@ -76,7 +76,9 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors());
-app.use(bodyParser.json());
+// 提高请求体大小限制，支持较大的图片base64（默认100kb会导致413）
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
 // 生产环境静态托管前端构建产物（若存在）
 const path = require('path');
@@ -581,7 +583,13 @@ app.post('/api/ocr/recognize', (req, res) => {
 app.post('/api/ocr/xfyun', async (req, res) => {
   const { apiKey, secretKey, appId, imageBase64 } = req.body;
   
-  if (!appId || !apiKey || !secretKey) {
+  // 清理首尾空格，防止签名失败
+  const clean = (v) => (v == null ? '' : String(v).trim());
+  const appIdClean = clean(appId);
+  const apiKeyClean = clean(apiKey);
+  const secretKeyClean = clean(secretKey);
+
+  if (!appIdClean || !apiKeyClean || !secretKeyClean) {
     return res.json({ success: false, error: '讯飞API需要AppID、API Key和API Secret三个参数，请在API管理中正确配置' });
   }
 
@@ -611,7 +619,7 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     // 构建请求体（参考讯飞 ITR 文档）
     const requestBody = {
       common: {
-        app_id: String(appId)
+        app_id: String(appIdClean)
       },
       business: {
         ent: 'teach-photo-print',
@@ -629,10 +637,10 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     
     // 构建签名字符串 - 包含 host/date/request-line/digest
     const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}\ndigest: SHA-256=${digest}`;
-    const signature = crypto.createHmac('sha256', secretKey).update(signatureOrigin, 'utf8').digest('base64');
+    const signature = crypto.createHmac('sha256', secretKeyClean).update(signatureOrigin, 'utf8').digest('base64');
     
     // 构建Authorization header（api_key 形式）
-    const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
+    const authorization = `api_key="${apiKeyClean}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
 
     // 打印安全化的请求头，避免泄露签名/密钥
     const safeHeaders = {

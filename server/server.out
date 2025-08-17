@@ -1,6 +1,6 @@
 服务器运行在端口 3001
 custom_tags列已存在，跳过添加
-info: [object Object] {"timestamp":"2025-08-17T12:24:12.014Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:00:01.448Z"}
 调用讯飞公式识别API...
 发送讯飞API请求... {
   url: 'https://rest-api.xfyun.cn/v2/itr',
@@ -8,7 +8,7 @@ info: [object Object] {"timestamp":"2025-08-17T12:24:12.014Z"}
     'Content-Type': 'application/json; charset=utf-8',
     Accept: 'application/json,version=1.0',
     Host: 'rest-api.xfyun.cn',
-    Date: 'Sun, 17 Aug 2025 12:24:12 GMT',
+    Date: 'Sun, 17 Aug 2025 14:00:01 GMT',
     Digest: '[len:44]',
     Authorization: '[REDACTED]'
   }
@@ -21,8 +21,78 @@ info: [object Object] {"timestamp":"2025-08-17T12:24:12.014Z"}
       name: 'iFlytek-Confucius Engine',
       version: '2.0.0.1101'
     },
-    protocol: '2.0'
+    protocol: '2.0',
+    region: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ]
   },
   message: 'success',
-  sid: 'itr0008c3f9@gz198b7fcc2a1460a902'
+  sid: 'itr0008b0dd@gz198b8547eab463e902'
 }
+info: [object Object] {"timestamp":"2025-08-17T14:03:03.050Z"}
+调用讯飞公式识别API...
+发送讯飞API请求... {
+  url: 'https://rest-api.xfyun.cn/v2/itr',
+  headers: {
+    'Content-Type': 'application/json; charset=utf-8',
+    Accept: 'application/json,version=1.0',
+    Host: 'rest-api.xfyun.cn',
+    Date: 'Sun, 17 Aug 2025 14:03:03 GMT',
+    Digest: '[len:44]',
+    Authorization: '[REDACTED]'
+  }
+}
+讯飞API响应: {
+  code: 0,
+  data: {
+    _engine_info: {
+      category: 'teaching_assistance_photo',
+      name: 'iFlytek-Confucius Engine',
+      version: '2.0.0.1101'
+    },
+    protocol: '2.0',
+    region: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ]
+  },
+  message: 'success',
+  sid: 'itr0008d392@gz198b8574444460a902'
+}
+info: [object Object] {"timestamp":"2025-08-17T14:03:30.313Z"}
+调用讯飞公式识别API...
+发送讯飞API请求... {
+  url: 'https://rest-api.xfyun.cn/v2/itr',
+  headers: {
+    'Content-Type': 'application/json; charset=utf-8',
+    Accept: 'application/json,version=1.0',
+    Host: 'rest-api.xfyun.cn',
+    Date: 'Sun, 17 Aug 2025 14:03:30 GMT',
+    Digest: '[len:44]',
+    Authorization: '[REDACTED]'
+  }
+}
+讯飞API响应: {
+  code: 0,
+  data: {
+    _engine_info: {
+      category: 'teaching_assistance_photo',
+      name: 'iFlytek-Confucius Engine',
+      version: '2.0.0.1101'
+    },
+    protocol: '2.0',
+    region: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  },
+  message: 'success',
+  sid: 'itr0008b19b@gz198b857aedc463e902'
+}
+info: [object Object] {"timestamp":"2025-08-17T14:03:49.978Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:03:50.001Z"}

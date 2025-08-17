@@ -28,3 +28,28 @@
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T12:35:43.071Z"}
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/papers"},"timestamp":"2025-08-17T12:35:43.458Z"}
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/papers"},"timestamp":"2025-08-17T12:35:43.458Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T12:39:17.199Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T12:39:17.201Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:40:50.860Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:48:40.792Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:48:44.867Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:50:31.149Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:50:50.429Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:50:56.512Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:52:30.928Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T13:02:51.283Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T13:03:03.852Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T13:03:45.961Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T13:03:45.965Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:48948]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T13:07:34.831Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:39636]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T13:08:37.507Z"}
+{"level":"info","message":{"body":{"analysis":"","answer":"","content":"ifly-latex-begin s^ {2} ifly-latex-end = ifly-latex-begin \\frac {1}{n} ifly-latex-end [ ifly-latex-begin (x'_ {1}-\\overline {x'})^ {2} ifly-latex-end + ifly-latex-begin (x'_ {2}-\\overline {x}')^ {2} ifly-latex-end + ifly-latex-begin \\cdots  ifly-latex-end + ifly-latex-begin (x'_ {n}-\\overline {x}')^ {2} ifly-latex-end ]","custom_tags":[],"difficulty":1,"grade":"","question_type":"","title":""},"method":"POST","url":"/api/questions"},"timestamp":"2025-08-17T13:08:45.887Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T13:08:45.915Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T13:08:45.918Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","imageBase64":"[base64:48948]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/tencent"},"timestamp":"2025-08-17T13:54:22.147Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:48948]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T13:54:22.158Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:194764]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T14:00:01.448Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:339392]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T14:03:03.050Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:248556]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T14:03:30.313Z"}
+{"level":"info","message":{"body":{"analysis":"【解析】(0,1.\n【标注】【知识点】区间表示法","answer":"【答案】(0,1]","content":"10.用区间表示集合 ifly-latex-begin \\begin{cases}\\frac{1}{x}|x\\geqslant1,x\\inR\\\\\\end{cases}  ifly-latex-end : ifly-latex-begin \\_  ifly-latex-end .\n【备注】\n对于初学者而言,数轴是练习区间表示的良好辅助工具","custom_tags":[],"difficulty":1,"grade":"","question_type":"","title":""},"method":"POST","url":"/api/questions"},"timestamp":"2025-08-17T14:03:49.978Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:03:50.001Z"}
