@@ -16,12 +16,54 @@ interface ApiConfig {
 }
 
 const API_TYPES = [
-  { value: 'mathpix', label: 'Mathpix API', description: '高精度数学公式识别' },
-  { value: 'tencent', label: '腾讯云数学公式', description: '免费1000次/月，支持LaTeX' },
-  { value: 'baidu', label: '百度智能云公式', description: '免费1000次/月，手写+印刷' },
-  { value: 'aliyun', label: '阿里云数学公式', description: '按量付费，高准确率' },
-  { value: 'xfyun', label: '讯飞公式识别', description: '题干+公式一体识别' },
-  { value: 'custom', label: '自定义API', description: '用户自定义接口' },
+  { 
+    value: 'mathpix', 
+    label: 'Mathpix API', 
+    description: '高精度数学公式识别',
+    applyUrl: 'https://mathpix.com/pricing',
+    docUrl: 'https://docs.mathpix.com/',
+    pricing: '免费100次/月，付费$0.004/次'
+  },
+  { 
+    value: 'tencent', 
+    label: '腾讯云数学公式', 
+    description: '免费1000次/月，支持LaTeX',
+    applyUrl: 'https://console.cloud.tencent.com/ocr/overview',
+    docUrl: 'https://cloud.tencent.com/document/api/866/38293',
+    pricing: '免费1000次/月，超出0.15元/次'
+  },
+  { 
+    value: 'baidu', 
+    label: '百度智能云公式', 
+    description: '免费1000次/月，手写+印刷',
+    applyUrl: 'https://console.bce.baidu.com/ai/#/ai/ocr/overview/index',
+    docUrl: 'https://ai.baidu.com/ai-doc/OCR/1k3h7y3db',
+    pricing: '免费1000次/月，付费0.015元/次'
+  },
+  { 
+    value: 'aliyun', 
+    label: '阿里云数学公式', 
+    description: '按量付费，高准确率',
+    applyUrl: 'https://www.aliyun.com/product/ocr',
+    docUrl: 'https://help.aliyun.com/zh/ocr/developer-reference/api-ocr-api-2021-07-07-recognizeeduformula',
+    pricing: '按量付费，约0.02元/次'
+  },
+  { 
+    value: 'xfyun', 
+    label: '讯飞公式识别', 
+    description: '题干+公式一体识别',
+    applyUrl: 'https://console.xfyun.cn/services/formula-discern',
+    docUrl: 'https://www.xfyun.cn/doc/words/formula-discern/API.html',
+    pricing: '商用需联系客服'
+  },
+  { 
+    value: 'custom', 
+    label: '自定义API', 
+    description: '用户自定义接口',
+    applyUrl: '',
+    docUrl: '',
+    pricing: '根据服务商而定'
+  },
 ];
 
 const ApiManagement: React.FC = () => {
@@ -137,9 +179,41 @@ const ApiManagement: React.FC = () => {
           <div className="text-center py-12">
             <Settings className="h-12 w-12 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">暂无API配置</h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-6">
               添加数学公式识别API以提升图片识别效果
             </p>
+            
+            {/* 推荐API快速链接 */}
+            <div className="bg-blue-50 rounded-lg p-4 mb-6 max-w-2xl mx-auto">
+              <h4 className="font-medium text-blue-900 mb-3">推荐API服务商</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                <div className="bg-white rounded-md p-3 text-left">
+                  <div className="font-medium text-gray-900">腾讯云 (推荐)</div>
+                  <div className="text-gray-600 text-xs mt-1">免费1000次/月，性价比最高</div>
+                  <a
+                    href="https://console.cloud.tencent.com/ocr/overview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline text-xs mt-2 inline-block"
+                  >
+                    📝 立即申请
+                  </a>
+                </div>
+                <div className="bg-white rounded-md p-3 text-left">
+                  <div className="font-medium text-gray-900">Mathpix</div>
+                  <div className="text-gray-600 text-xs mt-1">精度最高，复杂公式识别</div>
+                  <a
+                    href="https://mathpix.com/pricing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline text-xs mt-2 inline-block"
+                  >
+                    📝 立即申请
+                  </a>
+                </div>
+              </div>
+            </div>
+            
             <button
               onClick={() => setIsAddModalOpen(true)}
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
@@ -370,7 +444,32 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
                   ))}
                 </select>
                 {selectedType && (
-                  <p className="text-xs text-gray-500 mt-1">{selectedType.description}</p>
+                  <div className="mt-2 space-y-1">
+                    <p className="text-xs text-gray-500">{selectedType.description}</p>
+                    <p className="text-xs text-green-600 font-medium">{selectedType.pricing}</p>
+                    {selectedType.applyUrl && (
+                      <div className="flex items-center space-x-2 text-xs">
+                        <a
+                          href={selectedType.applyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-800 underline"
+                        >
+                          📝 申请API密钥
+                        </a>
+                        {selectedType.docUrl && (
+                          <a
+                            href={selectedType.docUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-800 underline"
+                          >
+                            📚 查看文档
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
