@@ -1667,3 +1667,894 @@ TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData:
     281 |             setIsAddModalOpen(false);
     282 |             setEditingApi(null);
 
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+ERROR in src/components/ApiManagement.tsx:279:11
+TS2322: Type '(apiData: ApiConfig) => void' is not assignable to type '(apiData: ApiConfig | Omit<ApiConfig, "id">) => void'.
+  Types of parameters 'apiData' and 'apiData' are incompatible.
+    Type 'ApiConfig | Omit<ApiConfig, "id">' is not assignable to type 'ApiConfig'.
+      Property 'id' is missing in type 'Omit<ApiConfig, "id">' but required in type 'ApiConfig'.
+    277 |         <ApiConfigModal
+    278 |           api={editingApi}
+  > 279 |           onSave={editingApi ? handleEditApi : handleAddApi}
+        |           ^^^^^^
+    280 |           onCancel={() => {
+    281 |             setIsAddModalOpen(false);
+    282 |             setEditingApi(null);
+
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+Compiling...
+No issues found.
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+Compiling...
+No issues found.
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.
+Compiling...
+Compiled with warnings.
+
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+[eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+
+WARNING in [eslint] 
+src/components/ImageUpload.tsx
+  Line 184:41:  Unnecessary escape character: \.  no-useless-escape
+
+src/components/ManualPaper.tsx
+  Line 3:20:  'Plus' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  Line 29:6:  React Hook useEffect has a missing dependency: 'fetchQuestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 53:9:  'getDifficultyColor' is assigned a value but never used                                                            @typescript-eslint/no-unused-vars
+
+src/components/QuestionForm.tsx
+  Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/mathOcrApi.ts
+  Line 100:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 2 warnings
+No issues found.

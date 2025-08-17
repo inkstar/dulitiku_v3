@@ -175,6 +175,44 @@ class MathOcrService {
     }
   }
 
+  private async callXfyunApi(apiConfig: ApiConfig, imageBase64: string): Promise<OcrResult> {
+    try {
+      // 讯飞公式识别API调用
+      const response = await fetch('/api/ocr/xfyun', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          apiKey: apiConfig.apiKey,
+          secretKey: apiConfig.secretKey,
+          imageBase64: imageBase64
+        })
+      });
+
+      const result = await response.json();
+      
+      if (!result.success) {
+        throw new Error(result.error || '讯飞API调用失败');
+      }
+
+      return {
+        success: true,
+        text: result.text || '',
+        latex: result.latex || '',
+        confidence: result.confidence || 0,
+        apiUsed: '讯飞公式识别'
+      };
+    } catch (error) {
+      return {
+        success: false,
+        text: '',
+        error: error instanceof Error ? error.message : '讯飞API调用失败',
+        apiUsed: '讯飞公式识别'
+      };
+    }
+  }
+
   private async callCustomApi(apiConfig: ApiConfig, imageBase64: string): Promise<OcrResult> {
     try {
       if (!apiConfig.endpoint) {
@@ -241,8 +279,7 @@ class MathOcrService {
         result = { success: false, text: '', error: '阿里云API暂未实现', apiUsed: apiConfig.name };
         break;
       case 'xfyun':
-        // 讯飞实现
-        result = { success: false, text: '', error: '讯飞API暂未实现', apiUsed: apiConfig.name };
+        result = await this.callXfyunApi(apiConfig, imageBase64);
         break;
       case 'custom':
         result = await this.callCustomApi(apiConfig, imageBase64);

@@ -529,6 +529,185 @@ app.post('/api/ocr/recognize', (req, res) => {
   }, 2000);
 });
 
+// 讯飞公式识别API代理
+app.post('/api/ocr/xfyun', async (req, res) => {
+  const { apiKey, secretKey, imageBase64 } = req.body;
+  
+  if (!apiKey) {
+    return res.json({ success: false, error: '缺少API Key' });
+  }
+
+  try {
+    console.log('调用讯飞公式识别API...');
+    
+    // 讯飞API需要特殊的认证和格式
+    const crypto = require('crypto');
+    const CryptoJS = require('crypto-js');
+    
+    // 构建讯飞API请求
+    const url = 'https://api.xf-yun.com/v1/private/s9a3db3b7';
+    const host = 'api.xf-yun.com';
+    const date = new Date().toUTCString();
+    
+    // 生成Authorization header (讯飞特有的签名算法)
+    const signatureOrigin = `host: ${host}\ndate: ${date}\nPOST /v1/private/s9a3db3b7 HTTP/1.1`;
+    const signature = CryptoJS.HmacSHA256(signatureOrigin, secretKey).toString(CryptoJS.enc.Base64);
+    const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line", signature="${signature}"`;
+    
+    const requestBody = {
+      common: {
+        app_id: apiKey
+      },
+      business: {
+        ent: 'teach-photo-print',
+        aue: 'raw'
+      },
+      data: {
+        image: imageBase64
+      }
+    };
+
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Host': host,
+        'Date': date,
+        'Authorization': authorization
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    const result = await response.json();
+    
+    if (result.code !== 0) {
+      throw new Error(result.message || '讯飞API调用失败');
+    }
+
+    // 解析讯飞返回的结果
+    let recognizedText = '';
+    if (result.data && result.data.region) {
+      result.data.region.forEach(region => {
+        if (region.recog && region.recog.content) {
+          recognizedText += region.recog.content + '\n';
+        }
+      });
+    }
+
+    res.json({
+      success: true,
+      text: recognizedText.trim(),
+      latex: recognizedText.trim(), // 讯飞可能直接返回LaTeX格式
+      confidence: result.data ? 0.9 : 0.5 // 估算置信度
+    });
+
+  } catch (error) {
+    console.error('讯飞API调用失败:', error);
+    res.json({
+      success: false,
+      error: error.message || '讯飞API调用失败'
+    });
+  }
+});
+
+// 腾讯云数学公式识别API代理
+app.post('/api/ocr/tencent', async (req, res) => {
+  const { apiKey, secretKey, imageBase64 } = req.body;
+  
+  if (!apiKey || !secretKey) {
+    return res.json({ success: false, error: '缺少API Key或Secret Key' });
+  }
+
+  try {
+    console.log('调用腾讯云数学公式识别API...');
+    
+    // 腾讯云API需要复杂的签名，这里提供基础实现
+    // 建议使用腾讯云SDK或参考官方文档完善签名算法
+    
+    res.json({
+      success: false,
+      error: '腾讯云API需要复杂的签名算法，建议使用SDK实现'
+    });
+
+  } catch (error) {
+    console.error('腾讯云API调用失败:', error);
+    res.json({
+      success: false,
+      error: error.message || '腾讯云API调用失败'
+    });
+  }
+});
+
+// 百度智能云公式识别API代理
+app.post('/api/ocr/baidu', async (req, res) => {
+  const { apiKey, secretKey, imageBase64 } = req.body;
+  
+  if (!apiKey || !secretKey) {
+    return res.json({ success: false, error: '缺少API Key或Secret Key' });
+  }
+
+  try {
+    console.log('调用百度智能云公式识别API...');
+    
+    // 首先获取access_token
+    const tokenResponse = await fetch(`https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=${apiKey}&client_secret=${secretKey}`, {
+      method: 'POST'
+    });
+    
+    const tokenResult = await tokenResponse.json();
+    
+    if (!tokenResult.access_token) {
+      throw new Error('获取百度access_token失败');
+    }
+
+    // 调用公式识别API
+    const ocrResponse = await fetch(`https://aip.baidubce.com/rest/2.0/ocr/v1/formula?access_token=${tokenResult.access_token}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `image=${encodeURIComponent(imageBase64)}`
+    });
+
+    const ocrResult = await ocrResponse.json();
+    
+    if (ocrResult.error_code) {
+      throw new Error(ocrResult.error_msg || '百度API调用失败');
+    }
+
+    // 解析百度返回的结果
+    let recognizedText = '';
+    let latexText = '';
+    
+    if (ocrResult.words_result) {
+      ocrResult.words_result.forEach(item => {
+        if (item.words) {
+          recognizedText += item.words + '\n';
+        }
+        if (item.location) {
+          // 如果有LaTeX格式，提取它
+          latexText += item.words + '\n';
+        }
+      });
+    }
+
+    res.json({
+      success: true,
+      text: recognizedText.trim(),
+      latex: latexText.trim() || recognizedText.trim(),
+      confidence: ocrResult.words_result_num > 0 ? 0.85 : 0.5
+    });
+
+  } catch (error) {
+    console.error('百度API调用失败:', error);
+    res.json({
+      success: false,
+      error: error.message || '百度API调用失败'
+    });
+  }
+});
+
 // 迁移知识点到自定义标签
 app.post('/api/admin/migrate-knowledge-points', (req, res) => {
   console.log('开始迁移知识点到自定义标签');
