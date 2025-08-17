@@ -77,8 +77,8 @@ const PORT = 3001;
 
 app.use(cors());
 // 提高请求体大小限制，支持较大的图片base64
-app.use(bodyParser.json({ limit: '25mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '25mb' }));
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 
 // 生产环境静态托管前端构建产物（若存在）
 const path = require('path');

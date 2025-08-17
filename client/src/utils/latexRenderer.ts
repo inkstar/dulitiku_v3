@@ -8,10 +8,23 @@ export const preprocessLatex = (content: string): string => {
     return '';
   }
   
-  // 清洗不可见字符：NBSP(\u00A0)、ZWSP(\u200B)、ZWNJ(\u200C)、ZWJ(\u200D)、BOM(\uFEFF)
+  // 清理不可见字符与常见 Unicode 数学符号
   let processed = content
-    .replace(/[\u200B\u200C\u200D\uFEFF]/g, '')
-    .replace(/\u00A0/g, ' ');
+    // 移除零宽空格/不可见字符
+    .replace(/[\u200B\u200C\u200D\u2060\uFEFF]/g, '')
+    // 将 NBSP 转为空格
+    .replace(/\u00A0/g, ' ')
+    // 常见数学符号到 LaTeX
+    .replace(/⩾/g, '\\geqslant')
+    .replace(/⩽/g, '\\leqslant')
+    .replace(/≥/g, '\\geqslant')
+    .replace(/≤/g, '\\leqslant')
+    .replace(/∈/g, '\\in')
+    .replace(/ℝ/g, '\\mathbb{R}')
+    .replace(/×/g, '\\times')
+    .replace(/−/g, '-')
+    .replace(/（/g, '(')
+    .replace(/）/g, ')');
   
   // 处理转义的美元符号格式 \$...\$ (改进正则表达式)
   processed = processed.replace(/\\\$(.*?)\\\$/g, (match, formula) => {
