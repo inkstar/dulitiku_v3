@@ -25,6 +25,15 @@ interface OcrResult {
 }
 
 class MathOcrService {
+  private getApiBaseUrl(): string {
+    if (typeof window !== 'undefined') {
+      if (window.location.port === '3000' || process.env.NODE_ENV === 'development') {
+        return 'http://localhost:3001/api';
+      }
+      return `${window.location.origin}/api`;
+    }
+    return 'http://localhost:3001/api';
+  }
   private getApiConfigs(): ApiConfig[] {
     const savedApis = localStorage.getItem('ocrApiConfigs');
     if (!savedApis) return [];
@@ -103,7 +112,7 @@ class MathOcrService {
       // 这里应该实现腾讯云的签名算法
       // 由于签名复杂，建议通过后端代理
       
-      const response = await fetch('/api/ocr/tencent', {
+      const response = await fetch(`${this.getApiBaseUrl()}/ocr/tencent`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -140,8 +149,8 @@ class MathOcrService {
 
   private async callBaiduApi(apiConfig: ApiConfig, imageBase64: string): Promise<OcrResult> {
     try {
-      // 百度API调用逻辑
-      const response = await fetch('/api/ocr/baidu', {
+      // 百度API调用逻辑（后端代理）
+      const response = await fetch(`${this.getApiBaseUrl()}/ocr/baidu`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -178,8 +187,8 @@ class MathOcrService {
 
   private async callXfyunApi(apiConfig: ApiConfig, imageBase64: string): Promise<OcrResult> {
     try {
-      // 讯飞公式识别API调用
-      const response = await fetch('/api/ocr/xfyun', {
+      // 讯飞公式识别API调用（后端代理）
+      const response = await fetch(`${this.getApiBaseUrl()}/ocr/xfyun`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

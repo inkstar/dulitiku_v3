@@ -1,0 +1,100 @@
+
+> dulitiku-v3@1.0.0 dev
+> concurrently "npm run server" "npm run client"
+
+[0] 
+[0] > dulitiku-v3@1.0.0 server
+[0] > cd server && npm run dev
+[0] 
+[1] 
+[1] > dulitiku-v3@1.0.0 client
+[1] > cd client && npm start
+[1] 
+[0] 
+[0] > dulitiku-server@1.0.0 dev
+[0] > nodemon index.js
+[0] 
+[1] 
+[1] > dulitiku-client@0.1.0 start
+[1] > react-scripts start
+[1] 
+[0] [33m[nodemon] 3.1.10[39m
+[0] [33m[nodemon] to restart at any time, enter `rs`[39m
+[0] [33m[nodemon] watching path(s): *.*[39m
+[0] [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] 服务器运行在端口 3001
+[0] custom_tags列已存在，跳过添加
+[1] (node:33942) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+[1] (Use `node --trace-deprecation ...` to show where the warning was created)
+[1] (node:33942) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+[1] Starting the development server...
+[1] 
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] webpack compiled with 1 warning
+[1] No issues found.
+[0] info: [object Object] {"timestamp":"2025-08-17T12:30:57.621Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:30:57.625Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:40.158Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:40.159Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:40.763Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:40.764Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:40.765Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:43.070Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:43.071Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:43.458Z"}
+[0] info: [object Object] {"timestamp":"2025-08-17T12:35:43.458Z"}
+[1] Compiling...
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] webpack compiled with 2 warnings
+[1] Compiling...
+[1] No issues found.
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] webpack compiled with 2 warnings
+[1] No issues found.

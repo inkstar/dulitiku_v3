@@ -615,11 +615,10 @@ app.post('/api/ocr/xfyun', async (req, res) => {
       },
       business: {
         ent: 'teach-photo-print',
-        math_format: 'latex'
+        aue: 'raw'
       },
       data: {
-        image: normalizedBase64,
-        image_type: 'base64'
+        image: normalizedBase64
       }
     };
 
@@ -632,20 +631,19 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}\ndigest: SHA-256=${digest}`;
     const signature = crypto.createHmac('sha256', secretKey).update(signatureOrigin, 'utf8').digest('base64');
     
-    // 构建Authorization header（包含 digest）
-    const authorization = `hmac username="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
+    // 构建Authorization header（api_key 形式）
+    const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
 
-    console.log('发送讯飞API请求...', {
-      url,
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Accept': 'application/json,version=1.0',
-        'Host': host,
-        'Date': date,
-        'Digest': `SHA-256=${digest}`,
-        'Authorization': authorization
-      }
-    });
+    // 打印安全化的请求头，避免泄露签名/密钥
+    const safeHeaders = {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Accept': 'application/json,version=1.0',
+      'Host': host,
+      'Date': date,
+      'Digest': `[len:${digest.length}]`,
+      'Authorization': '[REDACTED]'
+    };
+    console.log('发送讯飞API请求...', { url, headers: safeHeaders });
     
     const response = await fetch(url, {
       method: 'POST',
