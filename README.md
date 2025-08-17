@@ -1,5 +1,13 @@
 # 数学题库管理系统
 
+## 更新（2025-08-17 v1.2.3）
+
+- API设置：讯飞 AppID / API Key / API Secret 明码显示，便于对照文档填写与排错。
+- 后端日志：接入 winston 按日滚动日志（目录 `server/logs/`），自动脱敏密钥，保留14天。
+- 讯飞接口：对齐文档使用 HMAC-SHA256 + Digest 方案，`Accept: application/json,version=1.0`，并规范化 base64 输入。
+- 故障排查：若仍报错，请检查是否为同一应用的“公式识别 WebAPI”、IP 白名单是否放行当前公网 IP、设备时间是否准确（偏差<5分钟）。
+- 文档参考：[讯飞公式识别 API 调用流程](https://www.xfyun.cn/doc/words/formula-discern/API.html#接口调用流程)。
+
 一个专为独立数学老师设计的题库管理系统，支持题目录入、标签管理、智能组卷和人工组卷等功能。
 
 ## 功能特性

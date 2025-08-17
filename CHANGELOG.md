@@ -600,3 +600,10 @@
     - `client/src/components/ApiManagement.tsx` - 添加AppID字段和验证
     - `client/src/services/mathOcrApi.ts` - 更新接口和调用参数
     - `server/index.js` - 修正AppID参数使用
+
+## 2025-08-17 20:11:39 (v1.2.3)
+- 前端：`API管理` 明码显示讯飞 AppID / API Key / API Secret，便于校验。
+- 后端：接入 winston + 日志轮转，日志目录 `server/logs/`，自动脱敏密钥，保留14天。
+- 讯飞 ITR：按文档添加 `Accept: application/json,version=1.0`，签名包含 host/date/request-line/digest，规范化 base64（去除 data:image/*;base64, 前缀）。
+- 故障排查：若仍提示鉴权失败或字符串格式不匹配，请核对三项密钥是否属于同一应用的“公式识别 WebAPI”、是否配置了IP白名单且已放行当前公网IP、设备时间是否准确（<5分钟）。
+- 文档参考：[讯飞公式识别 API 调用流程](https://www.xfyun.cn/doc/words/formula-discern/API.html#接口调用流程)。

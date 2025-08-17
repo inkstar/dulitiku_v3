@@ -313,23 +313,28 @@ const ApiManagement: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* API密钥显示 */}
+                  {/* API密钥显示（明码显示） */}
                   <div className="mt-3 pt-3 border-t">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div className="flex items-center">
                         <Key className="h-4 w-4 text-gray-400 mr-2" />
-                        <span className="text-gray-600 mr-2">API Key:</span>
-                        <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-2">
-                          {isKeyVisible ? api.apiKey : '••••••••••••••••'}
+                        <span className="text-gray-600 mr-2">AppID:</span>
+                        <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-4">
+                          {api.appId || '-'}
                         </code>
-                        <button
-                          onClick={() => toggleApiKeyVisibility(api.id)}
-                          className="text-gray-400 hover:text-gray-600"
-                        >
-                          {isKeyVisible ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                        </button>
                       </div>
-                      
+                      <div className="flex items-center">
+                        <span className="text-gray-600 mr-2">API Key:</span>
+                        <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-4">
+                          {api.apiKey || '-'}
+                        </code>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-gray-600 mr-2">API Secret:</span>
+                        <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-4 break-all">
+                          {api.secretKey || '-'}
+                        </code>
+                      </div>
                       {api.endpoint && (
                         <div className="flex items-center">
                           <span className="text-gray-600 mr-2">端点:</span>
@@ -497,7 +502,7 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
                   AppID *
                 </label>
                 <input
-                  type="password"
+                  type="text"
                   value={formData.appId}
                   onChange={(e) => setFormData({ ...formData, appId: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -511,7 +516,7 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
                 {formData.type === 'xfyun' ? 'API Key *' : formData.type === 'mathpix' ? 'App ID *' : 'API Key *'}
               </label>
               <input
-                type="password"
+                type="text"
                 value={formData.apiKey}
                 onChange={(e) => setFormData({ ...formData, apiKey: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -531,7 +536,7 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
                    'Secret Key *'}
                 </label>
                 <input
-                  type="password"
+                  type="text"
                   value={formData.secretKey}
                   onChange={(e) => setFormData({ ...formData, secretKey: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"

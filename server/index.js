@@ -80,6 +80,54 @@ app.use(bodyParser.json());
 
 // 生产环境静态托管前端构建产物（若存在）
 const path = require('path');
+// 日志系统：winston + 日志轮转（放在path初始化之后）
+const fs = require('fs');
+const winston = require('winston');
+const DailyRotateFile = require('winston-daily-rotate-file');
+
+const logsDir = path.join(__dirname, 'logs');
+if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir);
+}
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new DailyRotateFile({
+      filename: path.join(logsDir, 'app-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      zippedArchive: true,
+      maxSize: '20m',
+      maxFiles: '14d'
+    }),
+    new winston.transports.Console({
+      format: winston.format.simple()
+    })
+  ]
+});
+
+// 访问日志中间件（不记录敏感字段）
+app.use((req, res, next) => {
+  const { method, originalUrl } = req;
+  const safeBody = (() => {
+    try {
+      const clone = JSON.parse(JSON.stringify(req.body || {}));
+      if (clone.apiKey) clone.apiKey = '[REDACTED]';
+      if (clone.secretKey) clone.secretKey = '[REDACTED]';
+      if (clone.appId) clone.appId = '[REDACTED]';
+      if (clone.imageBase64) clone.imageBase64 = `[base64:${clone.imageBase64.length}]`;
+      return clone;
+    } catch (_e) {
+      return {};
+    }
+  })();
+  logger.info({ method, url: originalUrl, body: safeBody });
+  next();
+});
 const clientBuildPath = path.join(__dirname, '../client/build');
 app.use(express.static(clientBuildPath));
 
@@ -540,7 +588,7 @@ app.post('/api/ocr/xfyun', async (req, res) => {
   try {
     console.log('调用讯飞公式识别API...');
     
-    const CryptoJS = require('crypto-js');
+    const crypto = require('crypto');
     
     // 使用动态导入获取fetch
     let fetch;
@@ -557,36 +605,41 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     const date = new Date().toUTCString();
     const requestLine = 'POST /v2/itr HTTP/1.1';
     
-    // 构建请求体
+    // 规范化 base64：去掉 data:image/...;base64, 前缀
+    const normalizedBase64 = (imageBase64 || '').replace(/^data:image\/[a-zA-Z0-9.+-]+;base64,/, '');
+
+    // 构建请求体（参考讯飞 ITR 文档）
     const requestBody = {
       common: {
-        app_id: appId  // 使用正确的AppID
+        app_id: String(appId)
       },
       business: {
-        ent: 'teach-photo-print',  // 公式识别业务类型
-        aue: 'raw'
+        ent: 'teach-photo-print',
+        math_format: 'latex'
       },
       data: {
-        image: imageBase64
+        image: normalizedBase64,
+        image_type: 'base64'
       }
     };
 
     const bodyStr = JSON.stringify(requestBody);
     
-    // 计算body的SHA256哈希
-    const digest = CryptoJS.SHA256(bodyStr).toString(CryptoJS.enc.Base64);
+    // 计算body的SHA256哈希 (base64)
+    const digest = crypto.createHash('sha256').update(bodyStr, 'utf8').digest('base64');
     
-    // 构建签名字符串 - 讯飞要求特定的格式
+    // 构建签名字符串 - 包含 host/date/request-line/digest
     const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}\ndigest: SHA-256=${digest}`;
-    const signature = CryptoJS.HmacSHA256(signatureOrigin, secretKey).toString(CryptoJS.enc.Base64);
+    const signature = crypto.createHmac('sha256', secretKey).update(signatureOrigin, 'utf8').digest('base64');
     
-    // 构建Authorization header - 注意这里用的是apiKey作为app_key，但签名使用secretKey
-    const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
+    // 构建Authorization header（包含 digest）
+    const authorization = `hmac username="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
 
     console.log('发送讯飞API请求...', {
       url,
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json,version=1.0',
         'Host': host,
         'Date': date,
         'Digest': `SHA-256=${digest}`,
@@ -597,8 +650,8 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json,version=1.0',
         'Host': host,
         'Date': date,
         'Digest': `SHA-256=${digest}`,
@@ -606,8 +659,15 @@ app.post('/api/ocr/xfyun', async (req, res) => {
       },
       body: bodyStr
     });
-
-    const result = await response.json();
+    
+    // 兼容错误返回不是JSON的情况
+    const text = await response.text();
+    let result;
+    try {
+      result = JSON.parse(text);
+    } catch (_e) {
+      throw new Error(text || '讯飞API返回非JSON内容');
+    }
     console.log('讯飞API响应:', result);
     
     if (result.code !== 0) {

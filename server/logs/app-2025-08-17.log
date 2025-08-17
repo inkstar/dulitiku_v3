@@ -1,0 +1,5 @@
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:08:25.153Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:10:21.503Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T12:10:42.040Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T12:10:42.042Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:96]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T12:11:22.016Z"}

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/server/logs/.c0d84325c0af2e9c58d27041cb3b37edfe03e9a0-audit.json",
+    "files": [
+        {
+            "date": 1755432132113,
+            "name": "/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/server/logs/app-2025-08-17.log",
+            "hash": "871412bc43a77b3f285f1552be2c846c5b0b56ca818d16c4daa80b4b24b22ace"
+        }
+    ],
+    "hashType": "sha256"
+}
