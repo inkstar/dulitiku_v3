@@ -69,3 +69,9 @@
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:09:29.076Z"}
 {"level":"info","message":{"body":{"apiKey":"[REDACTED]","imageBase64":"[base64:248556]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/tencent"},"timestamp":"2025-08-17T14:10:13.390Z"}
 {"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:248556]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T14:10:13.403Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","imageBase64":"[base64:248556]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/tencent"},"timestamp":"2025-08-17T14:16:57.532Z"}
+{"level":"info","message":{"body":{"apiKey":"[REDACTED]","appId":"[REDACTED]","imageBase64":"[base64:248556]","secretKey":"[REDACTED]"},"method":"POST","url":"/api/ocr/xfyun"},"timestamp":"2025-08-17T14:16:57.539Z"}
+{"level":"info","message":{"body":{"analysis":"【解析】(0,1.\n【标注】【知识点】区间表示法","answer":"【答案】(0,1]","content":"10.用区间表示集合 $ \\begin{cases}\\frac{1}{x}|x\\geqslant1,x\\in \\mathbb{R}\\\\end{cases}  $ : $ \\_  $ .\n【备注】\n对于初学者而言,数轴是练习区间表示的良好辅助工具","custom_tags":["区间表示法"],"difficulty":1,"grade":"","question_type":"","title":""},"method":"POST","url":"/api/questions"},"timestamp":"2025-08-17T14:17:23.684Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:17:23.704Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:17:23.707Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:20:21.229Z"}

@@ -108,3 +108,36 @@ info: [object Object] {"timestamp":"2025-08-17T14:10:13.403Z"}
   message: 'success',
   sid: 'itr0008b2fa@gz198b85dd487463e902'
 }
+info: [object Object] {"timestamp":"2025-08-17T14:16:57.532Z"}
+调用腾讯云数学公式识别API...
+info: [object Object] {"timestamp":"2025-08-17T14:16:57.539Z"}
+调用讯飞公式识别API...
+发送讯飞API请求... {
+  url: 'https://rest-api.xfyun.cn/v2/itr',
+  headers: {
+    'Content-Type': 'application/json; charset=utf-8',
+    Accept: 'application/json,version=1.0',
+    Host: 'rest-api.xfyun.cn',
+    Date: 'Sun, 17 Aug 2025 14:16:57 GMT',
+    Digest: '[len:44]',
+    Authorization: '[REDACTED]'
+  }
+}
+讯飞API响应: {
+  code: 0,
+  data: {
+    _engine_info: {
+      category: 'teaching_assistance_photo',
+      name: 'iFlytek-Confucius Engine',
+      version: '2.0.0.1101'
+    },
+    protocol: '2.0',
+    region: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  },
+  message: 'success',
+  sid: 'itr0008b458@gz198b86401af463e902'
+}
+info: [object Object] {"timestamp":"2025-08-17T14:17:23.684Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:17:23.704Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:17:23.707Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:20:21.229Z"}

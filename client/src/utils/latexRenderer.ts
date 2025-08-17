@@ -39,6 +39,16 @@ export const preprocessLatex = (content: string): string => {
   // 处理 \begin{align} ... \end{align} 格式
   processed = processed.replace(/\\begin\{align\}([\s\S]*?)\\end\{align\}/g, '$$$$1$$');
   
+  // 处理 \begin{cases} ... \end{cases}（未包裹 $$ 也能渲染）
+  processed = processed.replace(/\\begin\{cases\}([\s\S]*?)\\end\{cases\}/g, (_m, content) => {
+    const normalized = String(content)
+      // 把竖线 | 当作分列符转换为 &（如果真的需要竖线，识别端应输出 \mid）
+      .replace(/\|/g, ' & ')
+      // 连续多个反斜杠规整为换行 \\
+      .replace(/\\{3,}/g, '\\\\');
+    return `$$\\begin{cases}${normalized}\\end{cases}$$`;
+  });
+
   return processed;
 };
 
