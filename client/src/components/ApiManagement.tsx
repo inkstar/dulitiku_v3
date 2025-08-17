@@ -73,6 +73,7 @@ const ApiManagement: React.FC = () => {
   const [editingApi, setEditingApi] = useState<ApiConfig | null>(null);
   const [testingApiId, setTestingApiId] = useState<string | null>(null);
   const [showApiKey, setShowApiKey] = useState<{ [key: string]: boolean }>({});
+  const [maskAllKeys, setMaskAllKeys] = useState<boolean>(true);
 
   // 模拟数据加载
   useEffect(() => {
@@ -164,13 +165,22 @@ const ApiManagement: React.FC = () => {
               <p className="text-sm text-gray-600">配置图片识别API，提升数学公式识别准确度</p>
             </div>
           </div>
-          <button
-            onClick={() => setIsAddModalOpen(true)}
-            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            添加API
-          </button>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setMaskAllKeys(!maskAllKeys)}
+              className="px-3 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+              title={maskAllKeys ? '显示密钥' : '隐藏密钥'}
+            >
+              {maskAllKeys ? '显示密钥' : '隐藏密钥'}
+            </button>
+            <button
+              onClick={() => setIsAddModalOpen(true)}
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
+              <Plus className="h-4 w-4 mr-2" />
+              添加API
+            </button>
+          </div>
         </div>
       </div>
 
@@ -320,19 +330,19 @@ const ApiManagement: React.FC = () => {
                         <Key className="h-4 w-4 text-gray-400 mr-2" />
                         <span className="text-gray-600 mr-2">AppID:</span>
                         <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-4">
-                          {api.appId || '-'}
+                          {maskAllKeys && api.appId ? '••••••••' : (api.appId || '-')}
                         </code>
                       </div>
                       <div className="flex items-center">
                         <span className="text-gray-600 mr-2">API Key:</span>
                         <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-4">
-                          {api.apiKey || '-'}
+                          {maskAllKeys && api.apiKey ? '••••••••' : (api.apiKey || '-')}
                         </code>
                       </div>
                       <div className="flex items-center">
                         <span className="text-gray-600 mr-2">API Secret:</span>
                         <code className="font-mono text-xs bg-gray-100 px-2 py-1 rounded mr-4 break-all">
-                          {api.secretKey || '-'}
+                          {maskAllKeys && api.secretKey ? '••••••••' : (api.secretKey || '-')}
                         </code>
                       </div>
                       {api.endpoint && (

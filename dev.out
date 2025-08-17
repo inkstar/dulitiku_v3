@@ -825,3 +825,267 @@
 [1] 
 [1] webpack compiled with 2 warnings
 [1] No issues found.
+[1] Compiling...
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 179:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 179:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] webpack compiled with 2 warnings
+[1] No issues found.
+[1] Compiling...
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 179:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 179:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] webpack compiled with 2 warnings
+[1] No issues found.
+[1] Compiling...
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] webpack compiled with 2 warnings
+[1] Compiling...
+[1] No issues found.
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] webpack compiled with 2 warnings
+[1] No issues found.
+[1] Compiling...
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/components/ApiManagement.tsx
+[1]   Line 2:50:    'Eye' is defined but never used                              @typescript-eslint/no-unused-vars
+[1]   Line 2:55:    'EyeOff' is defined but never used                           @typescript-eslint/no-unused-vars
+[1]   Line 143:9:   'toggleApiKeyVisibility' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1]   Line 240:21:  'isKeyVisible' is assigned a value but never used            @typescript-eslint/no-unused-vars
+[1] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/components/ApiManagement.tsx
+[1]   Line 2:50:    'Eye' is defined but never used                              @typescript-eslint/no-unused-vars
+[1]   Line 2:55:    'EyeOff' is defined but never used                           @typescript-eslint/no-unused-vars
+[1]   Line 143:9:   'toggleApiKeyVisibility' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1]   Line 240:21:  'isKeyVisible' is assigned a value but never used            @typescript-eslint/no-unused-vars
+[1] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] webpack compiled with 2 warnings
+[1] Compiling...
+[1] No issues found.
+[1] Compiled with warnings.
+[1] 
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] [eslint] 
+[1] src/components/ApiManagement.tsx
+[1]   Line 2:50:    'Eye' is defined but never used                              @typescript-eslint/no-unused-vars
+[1]   Line 2:55:    'EyeOff' is defined but never used                           @typescript-eslint/no-unused-vars
+[1]   Line 143:9:   'toggleApiKeyVisibility' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1]   Line 240:21:  'isKeyVisible' is assigned a value but never used            @typescript-eslint/no-unused-vars
+[1] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] Search for the keywords to learn more about each warning.
+[1] To ignore, add // eslint-disable-next-line to the line before.
+[1] 
+[1] WARNING in ./node_modules/html2pdf.js/dist/html2pdf.js
+[1] Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+[1] Failed to parse source map from '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map' file: Error: ENOENT: no such file or directory, open '/Users/shenchaonan/Documents/cursor_project/dulitiku_v3/client/node_modules/html2pdf.js/dist/es6-promise.map'
+[1] 
+[1] WARNING in [eslint] 
+[1] src/components/ApiManagement.tsx
+[1]   Line 2:50:    'Eye' is defined but never used                              @typescript-eslint/no-unused-vars
+[1]   Line 2:55:    'EyeOff' is defined but never used                           @typescript-eslint/no-unused-vars
+[1]   Line 143:9:   'toggleApiKeyVisibility' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1]   Line 240:21:  'isKeyVisible' is assigned a value but never used            @typescript-eslint/no-unused-vars
+[1] 
+[1] src/components/ImageUpload.tsx
+[1]   Line 201:41:  Unnecessary escape character: \.  no-useless-escape
+[1] 
+[1] src/components/QuestionForm.tsx
+[1]   Line 8:60:  'getGaussianIntegralExample' is defined but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/services/mathOcrApi.ts
+[1]   Line 110:13:  'endpoint' is assigned a value but never used  @typescript-eslint/no-unused-vars
+[1] 
+[1] src/utils/latexRenderer.ts
+[1]   Line 186:39:  Unnecessary escape character: \$  no-useless-escape
+[1] 
+[1] webpack compiled with 2 warnings
+[1] No issues found.
