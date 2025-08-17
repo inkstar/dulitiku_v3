@@ -63,7 +63,7 @@ const ApiManagement: React.FC = () => {
   };
 
   const handleDeleteApi = (id: string) => {
-    if (confirm('确定要删除这个API配置吗？')) {
+    if (window.confirm('确定要删除这个API配置吗？')) {
       const updatedApis = apis.filter(api => api.id !== id);
       saveApis(updatedApis);
     }
@@ -85,12 +85,12 @@ const ApiManagement: React.FC = () => {
       const result = await mathOcrService.testApiConfig(api);
       
       if (result.success) {
-        alert(`✅ ${result.message}`);
+        window.alert(`✅ ${result.message}`);
       } else {
-        alert(`❌ ${result.message}`);
+        window.alert(`❌ ${result.message}`);
       }
     } catch (error) {
-      alert(`❌ API ${api.name} 测试失败：${error instanceof Error ? error.message : '未知错误'}`);
+      window.alert(`❌ API ${api.name} 测试失败：${error instanceof Error ? error.message : '未知错误'}`);
     } finally {
       setTestingApiId(null);
     }
@@ -276,7 +276,13 @@ const ApiManagement: React.FC = () => {
       {(isAddModalOpen || editingApi) && (
         <ApiConfigModal
           api={editingApi}
-          onSave={editingApi ? handleEditApi : handleAddApi}
+          onSave={(apiData) => {
+            if (editingApi) {
+              handleEditApi(apiData as ApiConfig);
+            } else {
+              handleAddApi(apiData);
+            }
+          }}
           onCancel={() => {
             setIsAddModalOpen(false);
             setEditingApi(null);
@@ -312,7 +318,7 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
     e.preventDefault();
     
     if (!formData.name.trim() || !formData.apiKey.trim()) {
-      alert('请填写API名称和密钥');
+      window.alert('请填写API名称和密钥');
       return;
     }
 
