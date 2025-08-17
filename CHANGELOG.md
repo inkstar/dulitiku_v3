@@ -575,3 +575,28 @@
     - `client/src/components/ImageUpload.tsx` - 集成新OCR服务
     - `client/src/components/Layout.tsx` - 添加API管理导航
     - `client/src/App.tsx` - 添加API管理路由
+
+## 2025-08-17 19:45:00 (v1.2.1)
+- 修复讯飞API认证问题
+  - **签名算法修复**：添加了正确的SHA256 digest计算，修复"The string did not match the expected pattern"错误
+  - **认证参数说明**：明确讯飞API需要AppID(API Key)和APISecret两个参数
+  - **错误处理优化**：针对常见错误码(10163/10160)提供具体错误提示
+  - **业务参数调整**：使用正确的业务类型'teach-photo-print'和'raw'格式
+  - **请求头完善**：添加Digest头，符合讯飞API v2规范
+  - **调试信息增强**：添加详细的请求日志便于排查问题
+  - 更新文件：
+    - `server/index.js` - 修复讯飞API代理实现
+    - `client/src/components/ApiManagement.tsx` - 更新讯飞API说明
+
+## 2025-08-17 20:15:00 (v1.2.2)
+- 完善讯飞API三参数支持
+  - **前端表单增强**：为讯飞API添加独立的AppID字段，现在支持三个必需参数
+  - **参数字段调整**：AppID、API Key、API Secret三个字段清晰分离
+  - **表单验证完善**：确保讯飞API的三个参数都必须填写
+  - **后端接口更新**：修正讯飞API调用使用正确的AppID参数
+  - **接口类型扩展**：在ApiConfig接口中添加appId字段支持
+  - **错误提示优化**：明确提示讯飞API需要三个参数配置
+  - 更新文件：
+    - `client/src/components/ApiManagement.tsx` - 添加AppID字段和验证
+    - `client/src/services/mathOcrApi.ts` - 更新接口和调用参数
+    - `server/index.js` - 修正AppID参数使用

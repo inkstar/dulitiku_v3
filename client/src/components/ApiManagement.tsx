@@ -7,6 +7,7 @@ interface ApiConfig {
   type: 'mathpix' | 'tencent' | 'baidu' | 'aliyun' | 'xfyun' | 'custom';
   apiKey: string;
   secretKey?: string; // 某些服务需要
+  appId?: string; // 讯飞等服务的AppID
   endpoint?: string; // 自定义端点
   enabled: boolean;
   priority: number; // 1-100，数字越小优先级越高
@@ -51,7 +52,7 @@ const API_TYPES = [
   { 
     value: 'xfyun', 
     label: '讯飞公式识别', 
-    description: '题干+公式一体识别',
+    description: '题干+公式一体识别，需要AppID和APISecret',
     applyUrl: 'https://console.xfyun.cn/services/formula-discern',
     docUrl: 'https://www.xfyun.cn/doc/words/formula-discern/API.html',
     pricing: '商用需联系客服'
@@ -380,6 +381,7 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
     type: api?.type || 'tencent',
     apiKey: api?.apiKey || '',
     secretKey: api?.secretKey || '',
+    appId: api?.appId || '',
     endpoint: api?.endpoint || '',
     enabled: api?.enabled ?? true,
     priority: api?.priority || 10,
@@ -393,6 +395,20 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
     
     if (!formData.name.trim() || !formData.apiKey.trim()) {
       window.alert('请填写API名称和密钥');
+      return;
+    }
+    
+    // 检查讯飞API需要的AppID
+    if (formData.type === 'xfyun' && !formData.appId?.trim()) {
+      window.alert('请填写讯飞AppID');
+      return;
+    }
+    
+    // 检查需要Secret Key的API类型
+    if ((formData.type === 'tencent' || formData.type === 'baidu' || formData.type === 'xfyun' || formData.type === 'mathpix') && !formData.secretKey?.trim()) {
+      const keyName = formData.type === 'xfyun' ? 'API Secret' : 
+                     formData.type === 'mathpix' ? 'App Key' : 'Secret Key';
+      window.alert(`请填写${keyName}`);
       return;
     }
 
@@ -474,30 +490,56 @@ const ApiConfigModal: React.FC<ApiConfigModalProps> = ({ api, onSave, onCancel }
               </div>
             </div>
 
+            {/* 讯飞API需要显示AppID字段 */}
+            {formData.type === 'xfyun' && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  AppID *
+                </label>
+                <input
+                  type="password"
+                  value={formData.appId}
+                  onChange={(e) => setFormData({ ...formData, appId: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="输入讯飞AppID（如：5f9c7xxx）"
+                />
+              </div>
+            )}
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                API Key *
+                {formData.type === 'xfyun' ? 'API Key *' : formData.type === 'mathpix' ? 'App ID *' : 'API Key *'}
               </label>
               <input
                 type="password"
                 value={formData.apiKey}
                 onChange={(e) => setFormData({ ...formData, apiKey: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="输入API密钥"
+                placeholder={
+                  formData.type === 'xfyun' ? '输入讯飞API Key' :
+                  formData.type === 'mathpix' ? '输入Mathpix App ID' :
+                  '输入API密钥'
+                }
               />
             </div>
 
-            {(formData.type === 'tencent' || formData.type === 'baidu') && (
+            {(formData.type === 'tencent' || formData.type === 'baidu' || formData.type === 'xfyun' || formData.type === 'mathpix') && (
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Secret Key
+                  {formData.type === 'xfyun' ? 'API Secret *' : 
+                   formData.type === 'mathpix' ? 'App Key *' :
+                   'Secret Key *'}
                 </label>
                 <input
                   type="password"
                   value={formData.secretKey}
                   onChange={(e) => setFormData({ ...formData, secretKey: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="输入Secret Key（某些服务需要）"
+                  placeholder={
+                    formData.type === 'xfyun' ? '输入讯飞API Secret（32位字符串）' :
+                    formData.type === 'mathpix' ? '输入Mathpix App Key' :
+                    '输入Secret Key'
+                  }
                 />
               </div>
             )}

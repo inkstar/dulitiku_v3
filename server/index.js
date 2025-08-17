@@ -541,7 +541,15 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     console.log('调用讯飞公式识别API...');
     
     const CryptoJS = require('crypto-js');
-    const fetch = require('node-fetch');
+    
+    // 使用动态导入获取fetch
+    let fetch;
+    if (typeof globalThis.fetch !== 'undefined') {
+      fetch = globalThis.fetch;
+    } else {
+      const nodeFetch = await import('node-fetch');
+      fetch = nodeFetch.default;
+    }
     
     // 讯飞公式识别API的正确端点
     const url = 'https://rest-api.xfyun.cn/v2/itr';
@@ -572,7 +580,7 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}\ndigest: SHA-256=${digest}`;
     const signature = CryptoJS.HmacSHA256(signatureOrigin, secretKey).toString(CryptoJS.enc.Base64);
     
-    // 构建Authorization header
+    // 构建Authorization header - 注意这里用的是apiKey作为app_key，但签名使用secretKey
     const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
 
     console.log('发送讯飞API请求...', {
@@ -688,7 +696,14 @@ app.post('/api/ocr/baidu', async (req, res) => {
   try {
     console.log('调用百度智能云公式识别API...');
     
-    const fetch = require('node-fetch');
+    // 使用动态导入获取fetch
+    let fetch;
+    if (typeof globalThis.fetch !== 'undefined') {
+      fetch = globalThis.fetch;
+    } else {
+      const nodeFetch = await import('node-fetch');
+      fetch = nodeFetch.default;
+    }
     
     // 首先获取access_token
     const tokenResponse = await fetch(`https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=${apiKey}&client_secret=${secretKey}`, {

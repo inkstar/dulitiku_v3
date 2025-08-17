@@ -6,6 +6,7 @@ interface ApiConfig {
   type: 'mathpix' | 'tencent' | 'baidu' | 'aliyun' | 'xfyun' | 'custom';
   apiKey: string;
   secretKey?: string;
+  appId?: string; // 讯飞等服务的AppID
   endpoint?: string;
   enabled: boolean;
   priority: number;
@@ -184,6 +185,7 @@ class MathOcrService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          appId: apiConfig.appId,
           apiKey: apiConfig.apiKey,
           secretKey: apiConfig.secretKey,
           imageBase64: imageBase64
