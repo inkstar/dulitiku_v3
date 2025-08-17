@@ -1,6 +1,10 @@
 服务器运行在端口 3001
 custom_tags列已存在，跳过添加
-info: [object Object] {"timestamp":"2025-08-17T14:00:01.448Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:07:52.480Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:07:52.486Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:08:00.780Z"}
+调用腾讯云数学公式识别API...
+info: [object Object] {"timestamp":"2025-08-17T14:08:00.788Z"}
 调用讯飞公式识别API...
 发送讯飞API请求... {
   url: 'https://rest-api.xfyun.cn/v2/itr',
@@ -8,7 +12,7 @@ info: [object Object] {"timestamp":"2025-08-17T14:00:01.448Z"}
     'Content-Type': 'application/json; charset=utf-8',
     Accept: 'application/json,version=1.0',
     Host: 'rest-api.xfyun.cn',
-    Date: 'Sun, 17 Aug 2025 14:00:01 GMT',
+    Date: 'Sun, 17 Aug 2025 14:08:00 GMT',
     Digest: '[len:44]',
     Authorization: '[REDACTED]'
   }
@@ -32,9 +36,14 @@ info: [object Object] {"timestamp":"2025-08-17T14:00:01.448Z"}
     ]
   },
   message: 'success',
-  sid: 'itr0008b0dd@gz198b8547eab463e902'
+  sid: 'itr0008d4a3@gz198b85bcea6460a902'
 }
-info: [object Object] {"timestamp":"2025-08-17T14:03:03.050Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:08:45.038Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:08:45.062Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:08:45.064Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:09:01.749Z"}
+调用腾讯云数学公式识别API...
+info: [object Object] {"timestamp":"2025-08-17T14:09:01.757Z"}
 调用讯飞公式识别API...
 发送讯飞API请求... {
   url: 'https://rest-api.xfyun.cn/v2/itr',
@@ -42,7 +51,7 @@ info: [object Object] {"timestamp":"2025-08-17T14:03:03.050Z"}
     'Content-Type': 'application/json; charset=utf-8',
     Accept: 'application/json,version=1.0',
     Host: 'rest-api.xfyun.cn',
-    Date: 'Sun, 17 Aug 2025 14:03:03 GMT',
+    Date: 'Sun, 17 Aug 2025 14:09:01 GMT',
     Digest: '[len:44]',
     Authorization: '[REDACTED]'
   }
@@ -65,9 +74,14 @@ info: [object Object] {"timestamp":"2025-08-17T14:03:03.050Z"}
     ]
   },
   message: 'success',
-  sid: 'itr0008d392@gz198b8574444460a902'
+  sid: 'itr0008b2bd@gz198b85cbca4463e902'
 }
-info: [object Object] {"timestamp":"2025-08-17T14:03:30.313Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:09:29.046Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:09:29.071Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:09:29.076Z"}
+info: [object Object] {"timestamp":"2025-08-17T14:10:13.390Z"}
+调用腾讯云数学公式识别API...
+info: [object Object] {"timestamp":"2025-08-17T14:10:13.403Z"}
 调用讯飞公式识别API...
 发送讯飞API请求... {
   url: 'https://rest-api.xfyun.cn/v2/itr',
@@ -75,7 +89,7 @@ info: [object Object] {"timestamp":"2025-08-17T14:03:30.313Z"}
     'Content-Type': 'application/json; charset=utf-8',
     Accept: 'application/json,version=1.0',
     Host: 'rest-api.xfyun.cn',
-    Date: 'Sun, 17 Aug 2025 14:03:30 GMT',
+    Date: 'Sun, 17 Aug 2025 14:10:13 GMT',
     Digest: '[len:44]',
     Authorization: '[REDACTED]'
   }
@@ -92,7 +106,5 @@ info: [object Object] {"timestamp":"2025-08-17T14:03:30.313Z"}
     region: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
   },
   message: 'success',
-  sid: 'itr0008b19b@gz198b857aedc463e902'
+  sid: 'itr0008b2fa@gz198b85dd487463e902'
 }
-info: [object Object] {"timestamp":"2025-08-17T14:03:49.978Z"}
-info: [object Object] {"timestamp":"2025-08-17T14:03:50.001Z"}

@@ -9,6 +9,7 @@ interface ImageUploadProps {
     content: string;
     answer: string;
     analysis: string;
+    tags?: string[];
   }) => void;
 }
 
@@ -148,8 +149,12 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
         if (!text) return '';
         // 将 ifly-latex 标记转换为 KaTeX 可识别的 $$ 块级公式
         let t = text.replace(/ifly-latex-begin/gi, '$$').replace(/ifly-latex-end/gi, '$$');
-        // 去除可能多余的空格
-        t = t.replace(/\$\$\s+/g, '$$').replace(/\s+\$\$/g, '$$');
+        // 去掉识别产生的无效占位  $$ \_ $$
+        t = t.replace(/\$\$\s*\\_\s*\$\$/g, '');
+        // 常见符号修复：\inR -> \in \mathbb{R}
+        t = t.replace(/\\inR\b/g, '\\in \\mathbb{R}');
+        // 归一化 cases 中的换行符，避免出现 \\\ 变成多个
+        t = t.replace(/\\{3,}/g, '\\\\');
         return t;
       };
 
@@ -177,7 +182,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
 
     try {
       // 智能解析识别结果
-      const lines = recognizedText.split('\n').filter(line => line.trim());
+      const lines = recognizedText.split('\n');
       let content = '';
       let answer = '';
       let analysis = '';
@@ -212,22 +217,13 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
         // 根据当前部分添加内容
         switch (currentSection) {
           case 'content':
-            if (content && !content.endsWith('\n')) {
-              content += '\n';
-            }
-            content += trimmedLine;
+            content += (content ? '\n' : '') + trimmedLine;
             break;
           case 'answer':
-            if (answer && !answer.endsWith('\n')) {
-              answer += '\n';
-            }
-            answer += trimmedLine;
+            answer += (answer ? '\n' : '') + trimmedLine;
             break;
           case 'analysis':
-            if (analysis && !analysis.endsWith('\n')) {
-              analysis += '\n';
-            }
-            analysis += trimmedLine;
+            analysis += (analysis ? '\n' : '') + trimmedLine;
             break;
         }
       }
@@ -237,10 +233,24 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onRecognized }) => {
         content = recognizedText;
       }
 
+      // 从文本中提取知识点 → 作为自定义标签
+      const tags: string[] = [];
+      const kpMatch = recognizedText.match(/【知识点】\s*([^\n\r]+)/);
+      if (kpMatch && kpMatch[1]) {
+        kpMatch[1]
+          .split(/[、,，;；\s]/)
+          .map(s => s.trim())
+          .filter(Boolean)
+          .forEach(t => {
+            if (!tags.includes(t)) tags.push(t);
+          });
+      }
+
       onRecognized({
-        content: content.trim(),
-        answer: answer.trim(),
-        analysis: analysis.trim()
+        content: content,
+        answer: answer,
+        analysis: analysis,
+        tags
       });
       // 保留图片与识别文本，直到用户手动点击“重新上传/清除”
     } catch (error) {

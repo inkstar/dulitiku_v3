@@ -76,12 +76,15 @@ const QuestionForm: React.FC = () => {
   };
 
   // 图片识别结果处理
-  const handleImageRecognized = (result: { content: string; answer: string; analysis: string }) => {
+  const handleImageRecognized = (result: { content: string; answer: string; analysis: string; tags?: string[] }) => {
     setFormData(prev => ({
       ...prev,
       content: result.content,
       answer: result.answer,
-      analysis: result.analysis
+      analysis: result.analysis,
+      custom_tags: result.tags && result.tags.length
+        ? Array.from(new Set([...(prev.custom_tags || []), ...result.tags]))
+        : prev.custom_tags
     }));
     // 识别后不再自动切换到手动模式，保留在图片识别界面，便于对照与二次编辑
   };
