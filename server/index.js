@@ -533,40 +533,43 @@ app.post('/api/ocr/recognize', (req, res) => {
 app.post('/api/ocr/xfyun', async (req, res) => {
   const { apiKey, secretKey, imageBase64 } = req.body;
   
-  if (!apiKey) {
-    return res.json({ success: false, error: '缺少API Key' });
+  if (!apiKey || !secretKey) {
+    return res.json({ success: false, error: '缺少API Key或Secret Key' });
   }
 
   try {
     console.log('调用讯飞公式识别API...');
     
-    // 讯飞API需要特殊的认证和格式
-    const crypto = require('crypto');
     const CryptoJS = require('crypto-js');
+    const fetch = require('node-fetch');
     
-    // 构建讯飞API请求
-    const url = 'https://api.xf-yun.com/v1/private/s9a3db3b7';
-    const host = 'api.xf-yun.com';
+    // 讯飞公式识别API的正确端点
+    const url = 'https://rest-api.xfyun.cn/v2/itr';
+    const host = 'rest-api.xfyun.cn';
     const date = new Date().toUTCString();
+    const requestLine = 'POST /v2/itr HTTP/1.1';
     
-    // 生成Authorization header (讯飞特有的签名算法)
-    const signatureOrigin = `host: ${host}\ndate: ${date}\nPOST /v1/private/s9a3db3b7 HTTP/1.1`;
+    // 构建签名字符串
+    const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}`;
     const signature = CryptoJS.HmacSHA256(signatureOrigin, secretKey).toString(CryptoJS.enc.Base64);
     const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line", signature="${signature}"`;
     
+    // 构建请求体
     const requestBody = {
       common: {
         app_id: apiKey
       },
       business: {
-        ent: 'teach-photo-print',
-        aue: 'raw'
+        ent: 'math-formula',
+        sub: 'math'
       },
       data: {
         image: imageBase64
       }
     };
 
+    console.log('发送讯飞API请求...');
+    
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -580,26 +583,38 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     });
 
     const result = await response.json();
+    console.log('讯飞API响应:', result);
     
     if (result.code !== 0) {
-      throw new Error(result.message || '讯飞API调用失败');
+      throw new Error(result.message || `讯飞API错误码: ${result.code}`);
     }
 
     // 解析讯飞返回的结果
     let recognizedText = '';
+    let latexText = '';
+    
     if (result.data && result.data.region) {
       result.data.region.forEach(region => {
         if (region.recog && region.recog.content) {
           recognizedText += region.recog.content + '\n';
         }
+        // 如果有LaTeX格式
+        if (region.recog && region.recog.latex) {
+          latexText += region.recog.latex + '\n';
+        }
       });
+    }
+
+    // 如果没有结果，可能是在data字段直接返回
+    if (!recognizedText && result.data && result.data.text) {
+      recognizedText = result.data.text;
     }
 
     res.json({
       success: true,
-      text: recognizedText.trim(),
-      latex: recognizedText.trim(), // 讯飞可能直接返回LaTeX格式
-      confidence: result.data ? 0.9 : 0.5 // 估算置信度
+      text: recognizedText.trim() || '识别结果为空',
+      latex: latexText.trim() || recognizedText.trim(),
+      confidence: result.data ? 0.9 : 0.5
     });
 
   } catch (error) {
@@ -649,6 +664,8 @@ app.post('/api/ocr/baidu', async (req, res) => {
 
   try {
     console.log('调用百度智能云公式识别API...');
+    
+    const fetch = require('node-fetch');
     
     // 首先获取access_token
     const tokenResponse = await fetch(`https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=${apiKey}&client_secret=${secretKey}`, {
