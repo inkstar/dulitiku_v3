@@ -1,2 +1,4 @@
 服务器运行在端口 3001
 custom_tags列已存在，跳过添加
+收到重启前端请求
+前端重启需要手动执行: cd client && npm start

@@ -531,10 +531,10 @@ app.post('/api/ocr/recognize', (req, res) => {
 
 // 讯飞公式识别API代理
 app.post('/api/ocr/xfyun', async (req, res) => {
-  const { apiKey, secretKey, imageBase64 } = req.body;
+  const { apiKey, secretKey, appId, imageBase64 } = req.body;
   
-  if (!apiKey || !secretKey) {
-    return res.json({ success: false, error: '讯飞API需要AppID(API Key)和APISecret，请在API管理中正确配置' });
+  if (!appId || !apiKey || !secretKey) {
+    return res.json({ success: false, error: '讯飞API需要AppID、API Key和API Secret三个参数，请在API管理中正确配置' });
   }
 
   try {
@@ -552,7 +552,7 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     // 构建请求体
     const requestBody = {
       common: {
-        app_id: apiKey  // 这里应该是AppID
+        app_id: appId  // 使用正确的AppID
       },
       business: {
         ent: 'teach-photo-print',  // 公式识别业务类型
