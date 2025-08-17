@@ -534,7 +534,7 @@ app.post('/api/ocr/xfyun', async (req, res) => {
   const { apiKey, secretKey, imageBase64 } = req.body;
   
   if (!apiKey || !secretKey) {
-    return res.json({ success: false, error: '缺少API Key或Secret Key' });
+    return res.json({ success: false, error: '讯飞API需要AppID(API Key)和APISecret，请在API管理中正确配置' });
   }
 
   try {
@@ -549,26 +549,42 @@ app.post('/api/ocr/xfyun', async (req, res) => {
     const date = new Date().toUTCString();
     const requestLine = 'POST /v2/itr HTTP/1.1';
     
-    // 构建签名字符串
-    const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}`;
-    const signature = CryptoJS.HmacSHA256(signatureOrigin, secretKey).toString(CryptoJS.enc.Base64);
-    const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line", signature="${signature}"`;
-    
     // 构建请求体
     const requestBody = {
       common: {
-        app_id: apiKey
+        app_id: apiKey  // 这里应该是AppID
       },
       business: {
-        ent: 'math-formula',
-        sub: 'math'
+        ent: 'teach-photo-print',  // 公式识别业务类型
+        aue: 'raw'
       },
       data: {
         image: imageBase64
       }
     };
 
-    console.log('发送讯飞API请求...');
+    const bodyStr = JSON.stringify(requestBody);
+    
+    // 计算body的SHA256哈希
+    const digest = CryptoJS.SHA256(bodyStr).toString(CryptoJS.enc.Base64);
+    
+    // 构建签名字符串 - 讯飞要求特定的格式
+    const signatureOrigin = `host: ${host}\ndate: ${date}\n${requestLine}\ndigest: SHA-256=${digest}`;
+    const signature = CryptoJS.HmacSHA256(signatureOrigin, secretKey).toString(CryptoJS.enc.Base64);
+    
+    // 构建Authorization header
+    const authorization = `api_key="${apiKey}", algorithm="hmac-sha256", headers="host date request-line digest", signature="${signature}"`;
+
+    console.log('发送讯飞API请求...', {
+      url,
+      headers: {
+        'Content-Type': 'application/json',
+        'Host': host,
+        'Date': date,
+        'Digest': `SHA-256=${digest}`,
+        'Authorization': authorization
+      }
+    });
     
     const response = await fetch(url, {
       method: 'POST',
@@ -577,16 +593,23 @@ app.post('/api/ocr/xfyun', async (req, res) => {
         'Accept': 'application/json',
         'Host': host,
         'Date': date,
+        'Digest': `SHA-256=${digest}`,
         'Authorization': authorization
       },
-      body: JSON.stringify(requestBody)
+      body: bodyStr
     });
 
     const result = await response.json();
     console.log('讯飞API响应:', result);
     
     if (result.code !== 0) {
-      throw new Error(result.message || `讯飞API错误码: ${result.code}`);
+      let errorMsg = result.message || `讯飞API错误码: ${result.code}`;
+      if (result.code === 10163) {
+        errorMsg = 'AppID或APISecret错误，请检查配置';
+      } else if (result.code === 10160) {
+        errorMsg = '签名验证失败，请检查APISecret';
+      }
+      throw new Error(errorMsg);
     }
 
     // 解析讯飞返回的结果
