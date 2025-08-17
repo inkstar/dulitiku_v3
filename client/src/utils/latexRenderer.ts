@@ -8,7 +8,10 @@ export const preprocessLatex = (content: string): string => {
     return '';
   }
   
-  let processed = content;
+  // 清洗不可见字符：NBSP(\u00A0)、ZWSP(\u200B)、ZWNJ(\u200C)、ZWJ(\u200D)、BOM(\uFEFF)
+  let processed = content
+    .replace(/[\u200B\u200C\u200D\uFEFF]/g, '')
+    .replace(/\u00A0/g, ' ');
   
   // 处理转义的美元符号格式 \$...\$ (改进正则表达式)
   processed = processed.replace(/\\\$(.*?)\\\$/g, (match, formula) => {

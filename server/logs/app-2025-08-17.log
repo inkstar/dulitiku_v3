@@ -84,3 +84,10 @@
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/papers"},"timestamp":"2025-08-17T14:28:00.422Z"}
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:02.097Z"}
 {"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:02.099Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:04.829Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:04.830Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:06.528Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:06.529Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:13.804Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:28:13.804Z"}
+{"level":"info","message":{"body":{},"method":"GET","url":"/api/questions"},"timestamp":"2025-08-17T14:31:09.225Z"}
